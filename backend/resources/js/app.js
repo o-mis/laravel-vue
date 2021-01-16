@@ -27,6 +27,15 @@ Vue.component('test-component', require('./components/TestComponent.vue').defaul
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
+// const app = new Vue({
+//     el: '#app',
+// });
+
+new Vue({
+    el: '#dice',
+    methods:{
+        onClick: function(){
+            alert("サイコロを振る")
+        }
+    }
 });
