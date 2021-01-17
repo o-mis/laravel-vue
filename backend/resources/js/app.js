@@ -27,15 +27,17 @@ Vue.component('test-component', require('./components/TestComponent.vue').defaul
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// const app = new Vue({
-//     el: '#app',
-// });
-
-new Vue({
-    el: '#dice',
+const vm = new Vue({
+    el: '#app',
+    data:{
+        result:"ボタンを押すとここにおみくじの結果が出るよ",
+        omikujiResult:["大吉","中吉","小吉","凶"]
+    },
     methods:{
-        onClick: function(){
-            alert("サイコロを振る")
+        omikuji:function(){
+            const num = Math.floor(Math.random()*this.omikujiResult.length);
+            this.result = this.omikujiResult[num];
         }
     }
-});
+})
+

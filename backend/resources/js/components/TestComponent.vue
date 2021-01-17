@@ -1,13 +1,13 @@
 <template>
-    <div id="dice">
-      <button v-on:click="onClick">サイコロを振る</button>
+    <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <div id="app">
+                <button id="btn" v-on:click="omikuji">ボタン</button>
+                <div>{{result}}</div>
+            </div>
+          </div>
+        </div>
     </div>
 </template>
 
-<script>
-export default {
-    mounted() {
-        console.log("初のVue.js!");
-    },
-};
-</script>
